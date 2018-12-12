@@ -27,7 +27,8 @@ BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Build Official HavocOS
-HAVOC_BUILD_TYPE := Official
+HAVOC_BUILD_TYPE := HOMEMADE
+DEVICE_MAINTAINERS="sankar"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
