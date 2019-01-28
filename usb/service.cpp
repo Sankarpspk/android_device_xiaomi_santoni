@@ -1,8 +1,18 @@
 /*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
  * Copyright (C) 2018, The Linux Foundation. All rights reserved.
  * Not a Contribution.
  *
  * Copyright (C) 2016 The Android Open Source Project
+<<<<<<< HEAD
+=======
+=======
+ * Copyright (C) 2017 The LineageOS jProject
+>>>>>>> 2041679... whyred: Add basic USB HAL that reports no status change
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,10 +27,16 @@
  * limitations under the License.
  */
 
+<<<<<<< HEAD
 #define LOG_TAG "android.hardware.usb@1.1-service-qti"
 
 #include <hidl/HidlTransportSupport.h>
 #include "UsbGadget.h"
+=======
+#include <android-base/logging.h>
+#include <hidl/HidlTransportSupport.h>
+#include "Usb.h"
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 
 using android::sp;
 
@@ -29,6 +45,7 @@ using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
 // Generated HIDL files
+<<<<<<< HEAD
 using android::hardware::usb::gadget::V1_0::IUsbGadget;
 using android::hardware::usb::gadget::V1_0::implementation::UsbGadget;
 
@@ -51,4 +68,25 @@ int main() {
   // Under noraml cases, execution will not reach this line.
   ALOGI("USB Gadget HAL failed to join thread pool.");
   return 1;
+=======
+using android::hardware::usb::V1_0::IUsb;
+using android::hardware::usb::V1_0::implementation::Usb;
+
+int main() {
+    android::sp<IUsb> service = new Usb();
+
+    configureRpcThreadpool(1, true /*callerWillJoin*/);
+    android::status_t status = service->registerAsService();
+
+    if (status != android::OK) {
+        LOG(ERROR) << "Cannot register USB HAL service";
+        return 1;
+    }
+
+    LOG(INFO) << "USB HAL Ready.";
+    joinRpcThreadpool();
+    // Under noraml cases, execution will not reach this line.
+    LOG(ERROR) << "USB HAL failed to join thread pool.";
+    return 1;
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 }

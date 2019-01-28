@@ -83,7 +83,11 @@
             <name>IDrmFactory</name>
             <instance>default</instance>
         </interface>
+<<<<<<< HEAD
         <fqname>@1.1::ICryptoFactory/clearkey</fqname>
+=======
+	<fqname>@1.1::ICryptoFactory/clearkey</fqname>
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
         <fqname>@1.1::IDrmFactory/clearkey</fqname>
         <fqname>@1.1::ICryptoFactory/widevine</fqname>
         <fqname>@1.1::IDrmFactory/widevine</fqname>
@@ -476,6 +480,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
         <transport>hwbinder</transport>
+	<impl level="generic"></impl>
         <version>1.0</version>
         <interface>
             <name>IQtiOemHook</name>

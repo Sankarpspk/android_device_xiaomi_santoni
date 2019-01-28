@@ -20,7 +20,10 @@
 // #define LOG_NDEBUG 0
 
 #include <log/log.h>
+<<<<<<< HEAD
 #include <cutils/properties.h>
+=======
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>

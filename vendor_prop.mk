@@ -10,7 +10,10 @@ persist.audio.fluence.speaker=false \
 persist.vendor.audio.fluence.speaker=false \
 persist.vendor.audio.fluence.voicecall=true \
 persist.vendor.audio.fluence.voicerec=false \
+<<<<<<< HEAD
 persist.vendor.audio.speaker.prot.enable=false \
+=======
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 persist.vendor.bt.enable.splita2dp=false \
 ro.af.client_heap_size_kbyte=7168 \
 ro.qc.sdk.audio.fluencetype=fluence \
@@ -72,7 +75,11 @@ persist.camera.HAL3.enabled=1
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.cne.feature=1 \
+<<<<<<< HEAD
 persist.dpm.feature=1
+=======
+persist.vendor.dpm.feature=1
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 
 # Coresight
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -112,6 +119,10 @@ vendor.display.rotator_downscale=1 \
 vendor.display.perf_hint_window=50 \
 vendor.gralloc.enable_fb_ubwc=1
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
 drm.service.enabled=true

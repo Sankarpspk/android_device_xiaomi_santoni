@@ -80,8 +80,13 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/util \
         $(LOCAL_PATH)/HAL3 \
         hardware/libhardware/include/hardware \
+<<<<<<< HEAD
         hardware/qcom/media-caf/msm8996/libstagefrighthw \
         hardware/qcom/media-caf/msm8996/mm-core/inc \
+=======
+        $(call project-path-for,qcom-media)/libstagefrighthw \
+        $(call project-path-for,qcom-media)/mm-core/inc \
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
         system/core/include/cutils \
         system/core/include/system \
         system/media/camera/include/system \
@@ -111,7 +116,11 @@ endif
 LOCAL_C_INCLUDES += \
         $(TARGET_OUT_HEADERS)/qcom/display
 LOCAL_C_INCLUDES += \
+<<<<<<< HEAD
         hardware/qcom/display-caf/msm8996/libqservice
+=======
+        $(call project-path-for,qcom-display)/libqservice
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl libsync
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder libhidlbase libhwbinder

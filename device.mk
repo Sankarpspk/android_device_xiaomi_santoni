@@ -128,7 +128,12 @@ PRODUCT_COPY_FILES += \
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \
+<<<<<<< HEAD
     com.dsi.ant.antradio_library
+=======
+    com.dsi.ant.antradio_library \
+    libantradio
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -176,6 +181,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
+
+PRODUCT_PACKAGES += \
+    vendor.display.color@1.0-service \
+    vendor.display.color@1.0-impl
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -323,6 +332,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml
 
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -391,8 +404,12 @@ PRODUCT_COPY_FILES += \
 
 # USB HAL
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
     android.hardware.usb@1.0-service.basic \
     android.hardware.usb.gadget@1.0-service-qti
+=======
+    android.hardware.usb@1.0-service.santoni
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -434,3 +451,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+# Doze
+PRODUCT_PACKAGES += \
+    XiaomiDoze

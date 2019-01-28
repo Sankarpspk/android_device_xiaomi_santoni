@@ -25,6 +25,11 @@ LOCAL_HEADER_LIBRARIES := libhardware_headers
 LOCAL_CFLAGS := -DLOG_TAG=\"qdlights\"
 LOCAL_CLANG  := true
 LOCAL_MODULE := lights.$(TARGET_BOARD_PLATFORM)
+<<<<<<< HEAD
+=======
+LOCAL_HEADER_LIBRARIES := libhardware_headers
+LOCAL_VENDOR_MODULE := true
+>>>>>>> 59d653af9608424cdc8e820024b90562c5aede19
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 
